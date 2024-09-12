@@ -11,6 +11,10 @@ class Sales(BaseModel):
     product_quantity: PositiveInt
     product_type: ProductEnum
 
+    @validate_call('product_type')
+    def category must_be_in_the_enum(cls, v):
+        return v
+
 class ProductEnum(str, Enum):
     product1 = "ZapFlow com Gemini"
     product2 = "ZapFlow com chatGPT"
