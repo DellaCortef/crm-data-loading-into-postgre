@@ -35,7 +35,7 @@ def main():
             st.write(sale)
 
         except ValidationError as e:
-            st.error("Something went wrong: {e}")
+            st.error(f"Something went wrong: {e}")
         
         except Exception as e:
             st.error(f"Error saving data: {e}")
