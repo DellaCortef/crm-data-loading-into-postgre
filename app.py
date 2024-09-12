@@ -6,7 +6,7 @@ def main():
     st.title("Sistema de CRM e Vendas da ZapFlow")
 
     # Input fields for data
-    email = st.text_input("Email do Vendedor")
+    seller_email = st.text_input("Email do Vendedor")
     purchase_data = st.date_input("Data da compra", datetime.now())
     purchase_time = st.time_input("Hora da compra", value=time(9, 0))  # Valor padrão: 09:00
     product_value = st.number_input("Valor da venda", min_value=0.0, format="%.2f")
@@ -20,7 +20,7 @@ def main():
 
         # Displaying the data on the screen
         st.write("**Dados da Venda:**")
-        st.write(f"Email do Vendedor: {email}")
+        st.write(f"Email do Vendedor: {seller_email}")
         st.write(f"Data e Hora da Compra: {date_time}")
         st.write(f"Valor da Venda: R$ {product_value:.2f}")
         st.write(f"Quantidade de Produtos: {quantity}")
