@@ -9,6 +9,9 @@ class Sales(BaseModel):
     date_time: datetime
     product_value: float
     product_quantity: int
-    product_type: str
+    product_type: ProductEnum
 
-class ProductEnum(str, enum):
+class ProductEnum(str, Enum):
+    product1 = "ZapFlow com Gemini"
+    product2 = "ZapFlow com chatGPT"
+    product3 = "ZapFlow com Llama 3.0"
