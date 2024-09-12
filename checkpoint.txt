@@ -15,8 +15,17 @@
 
 7. we are going to use Pydantic lib to verify the filled information:
     Pydantic lib is a lib that has series of verification coded
+    lib pydantic already has email validations, e.g.
 
 8. installing pydantic lib:
     cd to data-pipeline-pocket-reference
     source .venv/bin/activate
     pip install pydantic
+    pip install email-validator tzdata
+
+9. creating our classes validations:
+    email
+    date_time:
+    product_value
+    product_quantity
+    product_type -> it will be a validate_call (enumerate options)
