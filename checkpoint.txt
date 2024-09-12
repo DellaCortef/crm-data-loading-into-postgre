@@ -1,1 +1,2 @@
 1. creating python env -> venv (virtual env)
+2. installing streamlit lib only into data-pipeline project
