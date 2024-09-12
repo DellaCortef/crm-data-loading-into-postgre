@@ -11,7 +11,7 @@ def main():
     hora = st.time_input("Hora da compra", value=time(9, 0))  # Valor padrão: 09:00
     valor = st.number_input("Valor da venda", min_value=0.0, format="%.2f")
     quantidade = st.number_input("Quantidade de produtos", min_value=1, step=1)
-    produto = st.selectbox("Produto", options=["ZapFlow com Gemini", "ZapFlow com chatGPT", "ZapFlow com Llama3.0"])
+    produto = st.selectbox("Produto", options=["ZapFlow com Gemini", "ZapFlow com chatGPT", "ZapFlow com Llama 3.0"])
 
     # Botão de submissão
     if st.button("Salvar"):
