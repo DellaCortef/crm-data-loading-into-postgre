@@ -19,6 +19,17 @@ def main():
         # Combining the selected date and time to create the datetime
         date_time = datetime.combine(purchase_data, purchase_time)
 
+        # importing contract classes
+        contract(seller_email, purchase_data, purchase_time, product_value, product_quantity, product_type)
+
+        sale = Sales(
+            email = seller_email,
+            date_time = date_time,
+            product_value = product_value,
+            product_quantity = product_quantity,
+            product_type = product_type
+        )
+
         # Displaying the data on the screen
         st.write("**Dados da Venda:**")
         st.write(f"Email do Vendedor: {seller_email}")
