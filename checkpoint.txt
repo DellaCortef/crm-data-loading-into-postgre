@@ -4,4 +4,5 @@
     - app.py is a lib that transform any Python script into web application
 4. codinf: streamlit run app.py
     streamlit creates webpage running our application
-5. 
+5. inputing values into variables seller_email, purchase_data, purchase_time, product_value, product_quantity, and product_type
+6. 
