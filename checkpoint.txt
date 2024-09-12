@@ -2,3 +2,6 @@
 2. installing streamlit lib only into data-pipeline project
 3. creating app.py file 
     - app.py is a lib that transform any Python script into web application
+4. codinf: streamlit run app.py
+    streamlit creates webpage running our application
+5. 
