@@ -3,7 +3,7 @@ from datetime import datetime, time
 
 # Função principal para o frontend
 def main():
-    st.title("Sistema de CRM e Vendas da ZapFlow - Frontend Simples")
+    st.title("Sistema de CRM e Vendas da ZapFlow")
 
     # Campos de entrada para os dados
     email = st.text_input("Email do Vendedor")
