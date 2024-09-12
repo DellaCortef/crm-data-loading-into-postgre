@@ -1,8 +1,16 @@
 1. creating python env -> venv (virtual env)
+
 2. installing streamlit lib only into data-pipeline project
+
 3. creating app.py file 
     - app.py is a lib that transform any Python script into web application
+
 4. codinf: streamlit run app.py
     streamlit creates webpage running our application
+
 5. inputing values into variables seller_email, purchase_data, purchase_time, product_value, product_quantity, and product_type
-6. 
+
+6. creating contract.py file to add data contract:
+    the main objective is to ensure data gvernance when users are filling in the data
+
+7. 
