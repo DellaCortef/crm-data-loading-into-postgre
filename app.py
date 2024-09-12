@@ -1,5 +1,5 @@
-import contract
 import streamlit as st
+from contract import Sales
 from datetime import datetime, time
 
 # Main function for the frontend
