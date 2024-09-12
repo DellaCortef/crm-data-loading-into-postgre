@@ -4,6 +4,11 @@ from datetime import datetime
 from pydantic import BaseModel, EmailStr, validate_call, PositiveFloat, PositiveInt
 
 
+class ProductEnum(str, Enum):
+    product1 = "ZapFlow com Gemini"
+    product2 = "ZapFlow com chatGPT"
+    product3 = "ZapFlow com Llama 3.0"
+
 class Sales(BaseModel):
     email: EmailStr
     date_time: datetime
@@ -14,8 +19,3 @@ class Sales(BaseModel):
     @validate_call('product_type')
     def category_must_be_in_the_enum(cls, v):
         return v
-
-class ProductEnum(str, Enum):
-    product1 = "ZapFlow com Gemini"
-    product2 = "ZapFlow com chatGPT"
-    product3 = "ZapFlow com Llama 3.0"
