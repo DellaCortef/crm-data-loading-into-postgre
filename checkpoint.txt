@@ -39,3 +39,5 @@
 12. downloading pgAdmin to connect our database
 
 13. creating our sales table
+
+14. creating the connection of our code to the database
