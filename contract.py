@@ -12,7 +12,7 @@ class Sales(BaseModel):
     product_type: ProductEnum
 
     @validate_call('product_type')
-    def category must_be_in_the_enum(cls, v):
+    def category_must_be_in_the_enum(cls, v):
         return v
 
 class ProductEnum(str, Enum):
