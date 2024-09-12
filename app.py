@@ -1,6 +1,7 @@
 import streamlit as st
 from contract import Sales
 from datetime import datetime, time
+from pydantic import ValidationError
 
 # Main function for the frontend
 def main():
