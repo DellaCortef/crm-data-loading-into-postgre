@@ -1,7 +1,7 @@
 from enum import Enum
 from typing import Tuple
 from datetime import datetime
-from pydantic import BaseModel, EmailStr, validate_call, PositiveFloat, PositiveInt
+from pydantic import BaseModel, EmailStr, PositiveFloat, PositiveInt, validator, ValidationError
 
 
 class ProductEnum(str, Enum):
@@ -16,6 +16,17 @@ class Sales(BaseModel):
     product_quantity: PositiveInt
     product_type: ProductEnum
 
-    @validate_call('product_type')
-    def category_must_be_in_the_enum(cls, v):
+    @validator('date_time')
+    def validate_date_interval(cls, v):
+        # Define the allowed date range
+        interval_start = datetime(2024, 9, 1)  # 01/09/2024
+        interval_end = datetime(2024, 9, 12, 23, 59, 59)  # 12/09/2024 until 23:59:59
+
+        # Checks if the date is within the allowed range
+        if not (interval_start <= v <= interval_end):
+            raise ValueError("The date of sale must be between 09/01/2024 and 09/12/2024")
+        return v
+
+    @validator('produto')
+    def categoria_deve_estar_no_enum(cls, v):
         return v

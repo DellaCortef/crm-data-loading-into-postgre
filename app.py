@@ -17,27 +17,29 @@ def main():
 
     # Submit button
     if st.button("Salvar"):
-        # Combining the selected date and time to create the datetime
-        date_time = datetime.combine(purchase_data, purchase_time)
 
-        # importing contract classes
-        contract(seller_email, purchase_data, purchase_time, product_value, product_quantity, product_type)
+        try:
 
-        sale = Sales(
-            email = seller_email,
-            date_time = date_time,
-            product_value = product_value,
-            product_quantity = product_quantity,
-            product_type = product_type
-        )
+            # Combining the selected date and time to create the datetime
+            date_time = datetime.combine(purchase_data, purchase_time)
 
-        # Displaying the data on the screen
-        st.write("**Dados da Venda:**")
-        st.write(f"Email do Vendedor: {seller_email}")
-        st.write(f"Data e Hora da Compra: {date_time}")
-        st.write(f"Valor da Venda: R$ {product_value:.2f}")
-        st.write(f"Quantidade de Produtos: {product_quantity}")
-        st.write(f"Produto: {product_type}")
+            # importing contract classes
+            contract(seller_email, purchase_data, purchase_time, product_value, product_quantity, product_type)
+
+            sale = Sales(
+                email = seller_email,
+                date_time = date_time,
+                product_value = product_value,
+                product_quantity = product_quantity,
+                product_type = product_type
+            )
+
+            st.write(sale)
+
+        except ValidationError as e:
+            st.error("Something went wrong: {e}")
+
+
 
 if __name__ == "__main__":
     main()
