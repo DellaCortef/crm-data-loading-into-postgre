@@ -27,6 +27,6 @@ class Sales(BaseModel):
             raise ValueError("The date of sale must be between 09/01/2024 and 09/12/2024")
         return v
 
-    @validator('produto')
-    def categoria_deve_estar_no_enum(cls, v):
+    @validator('product_type')
+    def category_must_be_in_the_enum(cls, v):
         return v
