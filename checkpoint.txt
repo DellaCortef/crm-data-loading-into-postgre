@@ -30,3 +30,12 @@
     product_value
     product_quantity
     product_type -> it will be a validate_call (enumerate options)
+
+10. loading the information into Postgre
+    we will use render to run 24/7 open source without credit card
+
+11. creating database on render
+
+12. downloading pgAdmin to connect our database
+
+13. creating our sales table
