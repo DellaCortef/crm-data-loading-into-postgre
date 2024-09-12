@@ -13,9 +13,10 @@
 6. creating contract.py file to add data contract:
     the main objective is to ensure data gvernance when users are filling in the data
 
-7. we are going to use Pydantic lib to verify the filled information:
-    Pydantic lib is a lib that has series of verification coded
+7. we are going to use pydantic lib to verify the filled information:
+    pydantic lib is a lib that has series of verification coded
     lib pydantic already has email validations, e.g.
+    pydantic has error messages
 
 8. installing pydantic lib:
     cd to data-pipeline-pocket-reference
