@@ -13,4 +13,7 @@
 6. creating contract.py file to add data contract:
     the main objective is to ensure data gvernance when users are filling in the data
 
-7. 
+7. we are going to use Pydantic lib to verify the filled information:
+    Pydantic lib is a lib that has series of verification coded
+
+8. 
