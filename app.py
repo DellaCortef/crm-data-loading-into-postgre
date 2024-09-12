@@ -16,7 +16,7 @@ def main():
     # Submit button
     if st.button("Salvar"):
         # Combining the selected date and time to create the datetime
-        date_time = datetime.combine(data, hora)
+        date_time = datetime.combine(data, time)
 
         # Displaying the data on the screen
         st.write("**Dados da Venda:**")
