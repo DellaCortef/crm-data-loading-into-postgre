@@ -1,1 +1,1 @@
-1. creating python env -> venv 
+1. creating python env -> venv (virtual env)
