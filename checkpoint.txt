@@ -1,2 +1,4 @@
 1. creating python env -> venv (virtual env)
 2. installing streamlit lib only into data-pipeline project
+3. creating app.py file 
+    - app.py is a lib that transform any Python script into web application
