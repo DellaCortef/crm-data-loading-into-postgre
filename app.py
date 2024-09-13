@@ -27,9 +27,9 @@ def main():
             # Validating data with Pydantic
             sale = Sales(
                 email = seller_email.lower(),
-                date_time = date_time.lower(),
-                product_value = product_value.lower(),
-                product_quantity = product_quantity.lower(),
+                date_time = date_time,
+                product_value = product_value,
+                product_quantity = product_quantity,
                 product_type = product_type.lower()
             )
             st.write(sale)
