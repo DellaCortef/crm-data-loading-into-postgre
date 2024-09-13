@@ -26,11 +26,11 @@ def main():
 
             # Validating data with Pydantic
             sale = Sales(
-                email = seller_email,
-                date_time = date_time,
-                product_value = product_value,
-                product_quantity = product_quantity,
-                product_type = product_type
+                email = seller_email.lower(),
+                date_time = date_time.lower(),
+                product_value = product_value.lower(),
+                product_quantity = product_quantity.lower(),
+                product_type = product_type.lower()
             )
             st.write(sale)
             load_into_postgre(sale)
