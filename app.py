@@ -1,6 +1,7 @@
 import streamlit as st
 from datetime import datetime, time
 from pydantic import ValidationError
+from database import load_into_postgre
 from contract import Sales, ProductEnum
 
 # Main function for the frontend
@@ -31,8 +32,8 @@ def main():
                 product_quantity = product_quantity,
                 product_type = product_type
             )
-
             st.write(sale)
+            load_into_postgre(sale)
 
         except ValidationError as e:
             st.error(f"Something went wrong: {e}")
