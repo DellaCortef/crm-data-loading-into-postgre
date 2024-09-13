@@ -43,3 +43,5 @@
 14. creating the connection of our code to the database
     it needs to create a database.py file
     installing the psycopg2, sqlalchemy, dotenv libs
+
+15. deploying my streamlit to people help me to fill the data
