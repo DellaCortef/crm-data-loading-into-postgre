@@ -52,3 +52,4 @@
 17. after all, we can document the classes, functions, and so on
     doc Sales
     doc load_into_postgre
+    we need to run mkdocs serve on terminal
