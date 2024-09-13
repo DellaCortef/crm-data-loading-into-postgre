@@ -41,3 +41,5 @@
 13. creating our sales table
 
 14. creating the connection of our code to the database
+    it needs to create a database.py file
+    installing the psycopg2, sqlalchemy, dotenv libs
