@@ -48,3 +48,7 @@
 
 16. installing mkdocs to document our app
     pip install mkdocs mkdocs-material mkdocstrings mkdocstrings-python
+
+17. after all, we can document the classes, functions, and so on
+    doc Sales
+    doc load_into_postgre
