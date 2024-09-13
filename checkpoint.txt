@@ -45,3 +45,6 @@
     installing the psycopg2, sqlalchemy, dotenv libs
 
 15. deploying my streamlit to people help me to fill the data
+
+16. installing mkdocs to document our app
+    pip install mkdocs mkdocs-material mkdocstrings mkdocstrings-python
