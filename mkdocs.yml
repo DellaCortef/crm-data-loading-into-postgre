@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: "My Library"
 
 theme:
   name: "material"
@@ -6,4 +6,4 @@ theme:
 plugins:
   - search
   - mkdocstrings:
-    default_handler: python
+      default_handler: python
