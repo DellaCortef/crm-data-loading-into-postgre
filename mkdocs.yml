@@ -5,4 +5,5 @@ theme:
 
 plugins:
   - search
-  - mkdocstrings: python
+  - mkdocstrings: 
+    default_handler: python
