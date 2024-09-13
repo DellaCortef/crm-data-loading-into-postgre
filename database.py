@@ -27,7 +27,7 @@ def load_into_postgre(dados: Sales):
 
         # Inserting data into the sales table
         insert_query = sql.SQL(
-                    "INSERT INTO sales (email, date_time, product_value, product_quantity, product_type) VALUES (%s, %s, %s, %s, %s,)"
+            "INSERT INTO sales (email, date_time, product_value, product_quantity, product_type) VALUES (%s, %s, %s, %s, %s)"
         )
         cursor.execute(insert_query, (
             dados.email,
