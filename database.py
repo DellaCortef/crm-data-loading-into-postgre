@@ -1,5 +1,6 @@
 import os
 import psycopg2
+import streamlit as st
 from psycopg2 import sql
 from contract import Sales
 from dotenv import load_dotenv
@@ -35,3 +36,9 @@ def load_into_postgre(dados: Sales):
             dados.product_quantity,
             dados.product_type
         ))
+        conn.commit()
+        cursor.close()
+        conn.close()
+        st.success("Data successfully saved in Postgre")
+    except Exception as e:
+        st.error(f"Error saving data in Postgre: {e}")
