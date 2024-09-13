@@ -4,23 +4,34 @@ from psycopg2 import sql
 from contract import Sales
 from dotenv import load_dotenv
 
-from sqlalchemy import select, bindparam
-scalar_subq = (
-     select(user_table.c.id)
-     .where(user_table.c.name == bindparam("username"))
-     .scalar_subquery()
-)
+# Load variables from the .env file
+load_dotenv()
 
-with engine.connect() as conn:
-    result = conn.execute(
-        insert(address_table).values(user_id=scalar_subq),
-        [
-             {
-                 "username": "spongebob",
-                 "email_address": "spongebob@sqlalchemy.org",
-             },
-             {"username": "sandy", "email_address": "sandy@sqlalchemy.org"},
-             {"username": "sandy", "email_address": "sandy@squirrelpower.org"},
-        ],
-    )
-    conn.commit()
+# Postgre database configuration
+DB_HOST = os.getenv("DB_HOST")
+DB_NAME = os.getenv("DB_NAME")
+DB_USER = os.getenv("DB_USER")
+DB_PASS = os.getenv("DB_PASS")
+
+# Function to save validated data in Postgre
+def load_into_postgre(dados: Sales):
+    try:
+        conn = psycopg2.connect(
+            host=DB_HOST,
+            database=DB_NAME,
+            user=DB_USER,
+            password=DB_PASS
+        )
+        cursor = conn.cursor()
+
+        # Inserting data into the sales table
+        insert_query = sql.SQL(
+                    "INSERT INTO sales (email, date_time, product_value, product_quantity, product_type) VALUES (%s, %s, %s, %s, %s,)"
+        )
+        cursor.execute(insert_query, (
+            dados.email,
+            dados.date_time,
+            dados.product_value,
+            dados.product_quantity,
+            dados.product_type
+        ))
