@@ -53,3 +53,5 @@
     doc Sales
     doc load_into_postgre
     we need to run mkdocs serve on terminal
+
+-- changing repo name
