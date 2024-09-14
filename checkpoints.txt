@@ -54,4 +54,4 @@
     doc load_into_postgre
     we need to run mkdocs serve on terminal
 
--- changing repo name
+-- moving the project to py-projects/data-engineering folder
