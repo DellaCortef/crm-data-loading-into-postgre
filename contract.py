@@ -31,7 +31,7 @@ class Sales(BaseModel):
     def validate_date_interval(cls, v):
         # Define the allowed date range
         interval_start = datetime(2024, 9, 1)  # 01/09/2024
-        interval_end = datetime(2024, 9, 12, 23, 59, 59)  # 12/09/2024 until 23:59:59
+        interval_end = datetime(2026, 12, 31, 23, 59, 59)  # 12/09/2024 until 23:59:59
 
         # Checks if the date is within the allowed range
         if not (interval_start <= v <= interval_end):
